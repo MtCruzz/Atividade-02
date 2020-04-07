@@ -17,7 +17,18 @@ public class Funcionario {
     private int salario;
     private String datanasc;
 
-    public int getId() {
+    public Funcionario (){}
+
+    public Funcionario (int id, String nome, String rg, int salario, String datanasc)
+    {
+        this.id = id;
+        this.nome = nome;
+        this.rg = rg;
+        this.salario = salario;
+        this.datanasc = datanasc;
+    }
+
+	public int getId() {
         return id;
     }
 
