@@ -15,7 +15,7 @@ public class Funcionario {
     private String nome;
     private String rg;
     private int salario;
-    private String datanasc;
+    private String data;
 
     public int getId() {
         return id;
