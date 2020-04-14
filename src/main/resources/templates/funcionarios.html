@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Funcionarios</title>
 </head>
-<body>
+<body style="background-color: black;color:white">
     <h1>Funcionarios</h1>
 
        <form th:action="@{/salvar}" method="POST">
@@ -17,12 +17,13 @@
     </form> 
 
 
-    <table style="text-align: center; font-style: italic;">
-        <td>ID</td>
-        <td>Nome</td>
-        <td>RG</td>
-        <td>Salario</td>
-        <td>Data de nascimento</td>
+    <table style="text-align: center; width: 100%; border: 2px; border-style: double;
+    border-color: darkblue;">
+        <td style="color:blue;">ID</td>
+        <td style="color:blue;">Nome</td>
+        <td style="color:blue;">RG</td>
+        <td style="color:blue;">Salario</td>
+        <td style="color:blue;">Data de nascimento</td>
         <tr th:each="funcionario : ${funcionarios}">
             <td th:text ="${funcionario.id}"></td>
             <td th:text ="${funcionario.nome}"></td>
