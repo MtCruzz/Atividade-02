@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcionarios</title>
+</head>
+<body>
+    <h1>Funcionarios</h1>
+
+       <form th:action="@{/salvar}" method="POST">
+        <input type="text" name="nome" placeholder="Nome" required/>
+        <input type="text" name="rg" placeholder="RG" required/>
+        <input type="number" name="salario" placeholder="Salário" required/>
+        <input type="date" name="datanasc" required/>
+        <input type="submit" value="Salvar"/>
+    </form> 
+
+
+    <table style="text-align: center;">
+        <td>ID</td>
+        <td>Nome</td>
+        <td>RG</td>
+        <td>Salario</td>
+        <td>Data de nascimento</td>
+        <tr th:each="funcionario : ${funcionarios}">
+            <td th:text ="${funcionario.id}"></td>
+            <td th:text ="${funcionario.nome}"></td>
+            <td th:text ="${funcionario.rg}"></td>
+            <td th:text ="${funcionario.salario}"></td>
+            <td th:text ="${funcionario.datanasc}"></td>
+        </tr>
+    </table> 
+</body>
+</html>

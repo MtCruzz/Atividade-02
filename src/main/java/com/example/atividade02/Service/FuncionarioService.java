@@ -21,4 +21,9 @@ public class FuncionarioService {
     {
         return fr.findAll();
     }
+
+    public void salvar(Funcionario funcionario)
+    {
+        fr.save(funcionario);
+    }
 }
